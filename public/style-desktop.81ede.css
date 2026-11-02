@@ -1,0 +1,186 @@
+body {
+  cursor: default;
+  padding: 0;
+  border: 0;
+  margin: auto;
+  height: 99.5vh;
+  overflow: hidden;
+
+  text-align: center;
+  background-image: url("lk_h5_bg.jpg");
+  background-size: contain;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+body,
+canvas,
+div {
+  outline: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Remove spin of input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+#Cocos2dGameContainer {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  left: 0px;
+  top: 0px;
+}
+
+canvas {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+a:link,
+a:visited {
+  color: #000;
+}
+
+a:active,
+a:hover {
+  color: #666;
+}
+
+p.header {
+  font-size: small;
+}
+
+p.footer {
+  font-size: x-small;
+}
+
+#splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: #171717 url(./splash.03ce1.jpg) no-repeat center;
+  background-size: 130%;
+}
+
+.progress-bar {
+  background-color: #1a1a1a;
+  position: relative;
+  top: 80%;
+  height: 5px;
+  width: 90%;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+  transition: width .4s ease-in-out;
+  background-color: #3dc5de;
+}
+
+.stripes span {
+  background-size: 30px 30px;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+      transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+      transparent 75%, transparent);
+
+  animation: animate-stripes 1s linear infinite;
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+h1 {
+  color: #444;
+  text-shadow: 3px 3px 15px;
+}
+
+#GameDiv {
+  width: 56.30vh;
+  height: 99.5vh;
+  margin: 0 auto;
+  background: black;
+  position: relative;
+  border: 3px solid black;
+  border-radius: 6px;
+  box-shadow: 0 5px 40px rgb(0, 44, 138)
+}
+
+#glogincont {
+  display: none;
+  position: absolute;
+  margin: auto;
+  height: 100vh;
+  width: 56.3vh;
+  background-color: #000000b3;
+  inset: 0px !important;
+  border: 3px solid black;
+}
+
+#google_login_div {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 80%;
+  height: 50%;
+  top: 25%;
+  background-image: url('./popup_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#loginCloseBtn {
+  background-image: url('./closebut.png');
+  background-size: contain;
+  width: 6vh;
+  height: 6vh;
+  position: relative;
+  top: 16%;
+  left: 88%;
+  cursor: pointer;
+}
+
+#glogintext {
+  position: relative;
+  margin: auto;
+  top: 20%;
+  color: white;
+  font-size: 5vh;
+  text-align: center;
+}
+
+#glogin_btn {
+  width: 30vh;
+  height: 10vh;
+  position: relative;
+  margin: auto;
+  top: 30%;
+  cursor: pointer;
+  scale: 130%;
+  display: flex;
+  justify-content: center;
+}
